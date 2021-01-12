@@ -1,0 +1,13 @@
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  <br />
+  <span>
+    <div class="form-group">
+      <input type="email" class="form-control"
+       placeholder="Search username .."
+      (input)="passData($event.target.value)">
+    </div>
+    <br />
+    <br />
+    <b>Selected User: </b> <span>{{ selectedUser | async }}</span>
+  </span>
+</div>

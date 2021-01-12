@@ -1,0 +1,25 @@
+<div style="border-left: 1px solid grey; padding-left: 20px">
+  <h4>
+    <b>Input Text: {{ searchtext }}</b>
+  </h4>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">User Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of userTable; trackBy: trackIndex">
+        <th scope="row">{{ row.id }}</th>
+        <td (click)="sendData(row.name)">{{ row.name }}</td>
+        <td>{{ row.username }}</td>
+        <td>{{ row.email }}</td>
+        <td>{{ row.phone }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
